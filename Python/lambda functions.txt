@@ -1,0 +1,281 @@
+#math
+add = lambda x, y: x + y
+result = add(10, 20)
+print(result)  # Output: 30
+
+
+#multi math
+lambda_functions = [
+    lambda x, y: x + y,
+    lambda x, y: x - y,
+    lambda x, y: x * y,
+    lambda x, y: x / y,
+    lambda x, y: x % y
+]
+
+result1 = lambda_functions[0](10, 20)
+result2 = lambda_functions[1](10, 20)
+result3 = lambda_functions[2](10, 20)
+result4 = lambda_functions[3](10, 20)
+result5 = lambda_functions[4](10, 20)
+
+print(result1)  # Output: 30
+print(result2)  # Output: -10
+print(result3)  # Output: 200
+print(result4)  # 0.5
+print(result5)  #10
+
+#Lambda function to calculate the square of a number:
+square = lambda x: x ** 2
+result = square(5)
+print(result)  # Output: 25
+
+#Lambda function to check if a number is even:
+is_even = lambda x: x % 2 == 0
+result = is_even(6)
+print(result)  # Output: True
+
+#Lambda function to filter even numbers from a list:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
+print(even_numbers)  # Output: [2, 4, 6, 8, 10]
+
+#Lambda function to filter odd numbers from a list:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+even_numbers = list(filter(lambda x: x % 2 != 0, numbers))
+print(even_numbers)  # Output: [1, 3, 5, 7, 9]
+
+#Lambda function to sort a list of tuples by the second element:
+pairs = [(1, 5), (2, 3), (3, 10), (4, 1)]
+sorted_pairs = sorted(pairs, key=lambda x: x[1]) #change the value index value
+print(sorted_pairs)  # Output: [(4, 1), (2, 3), (1, 5), (3, 10)]
+
+#### Lambda function to extract the first character of each word in a list of strings:
+words = ["Hello", "World", "Python"]
+first_chars = list(map(lambda x: x[int(input("Enter the index value:"))], words))
+print(first_chars)
+
+#Lambda function to calculate the factorial of a number using recursion:
+factorial = lambda x: 1 if x == 0 else x * factorial(x - 1)
+result = factorial(int(input("Entert the Number:")))
+print(result)
+
+rectangle_area = lambda length, width: length * width
+length, width = map(int, input("Enter the length and width separated by a comma (,): ").split(","))
+result = rectangle_area(length, width)
+print("The area of the rectangle is:", result)
+
+#Lambda function to convert a temperature in Celsius to Fahrenheit:
+celsius_to_fahrenheit = lambda celsius: (celsius * 9/5) + 32
+result = celsius_to_fahrenheit(int(input("Enter the Celsius:")))
+print(result)
+
+#Lambda function to find the maximum value in a list:
+numbers = [12, 45, 23, 67, 9, 56, 31]
+max_value = lambda lst: max(lst)
+result = max_value(numbers)
+print(result)  # Output: 67
+
+#Lambda function to extract the domain from an email address:
+get_domain = lambda email: email.split('@')[1]
+result = get_domain((input("Enter your mail id:")))
+print(result)
+
+#Lambda function to check if a string is a palindrome:
+is_palindrome = lambda s: s == s[::-1]
+result = is_palindrome(input("Enter the word: ")) #racecar.tenet,appa,amma
+print(result)
+
+#Lambda function to calculate the square root of a number:
+import math
+sqrt = lambda x: math.sqrt(x)
+result = sqrt(int(input("Enter a number:")))
+print(result)  # Output: 4.0
+
+#Lambda function to calculate the volume of a cylinder:
+cylinder_volume = lambda radius, height: math.pi * radius ** 2 * height
+result = cylinder_volume(3, 5)
+print(result)  # Output: 141.3716694115407
+
+#Lambda function to calculate the length of a hypotenuse in a right triangle:
+hypotenuse_length = lambda a, b: math.sqrt(a ** 2 + b ** 2)
+result = hypotenuse_length(3, 4)
+print(result)  # Output: 5.0
+
+#Lambda function to capitalize the first letter of a string:
+capitalize_first_letter = lambda s: s.capitalize()
+result = capitalize_first_letter("hello world")
+print(result)  # Output: "Hello world"
+
+#Lambda function to filter words longer than a specified length from a list of strings:
+words = ["apple", "banana", "cherry", "date", "elderberry"]
+filter_long_words = lambda word_list, length: list(filter(lambda word: len(word) > length, word_list))
+result = filter_long_words(words, 5)
+print(result)  # Output: ["banana", "cherry", "elderberry"]
+
+
+#Lambda function to reverse the order of a list:
+reverse_list = lambda lst: lst[::-1]
+result = reverse_list([1, 2, 3, 4, 5])
+print(result)  # Output: [5, 4, 3, 2, 1]
+
+#Lambda function to calculate the sum of the squares of numbers in a list:
+numbers = [1, 2, 3, 4, 5]
+sum_of_squares = lambda lst: sum(map(lambda x: x ** 2, lst))
+result = sum_of_squares(numbers)
+print(result)  # Output: 55
+
+#Lambda function to find the median of a list of numbers:
+find_median = lambda numbers: sorted(numbers)[len(numbers) // 2] if len(numbers) % 2 != 0 else (numbers[len(numbers) // 2 - 1] + numbers[len(numbers) // 2]) / 2
+result = find_median([3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5])
+print(result)  # Output: 4
+
+#Lambda function to calculate the cumulative sum of a list:
+cumulative_sum = lambda lst: [sum(lst[:i + 1]) for i in range(len(lst))]
+result = cumulative_sum([1, 2, 3, 4, 5])
+print(result)  # Output: [1, 3, 6, 10, 15]
+
+#Lambda function to convert a list of strings to uppercase:
+to_uppercase = lambda strings: [s.upper() for s in strings]
+result = to_uppercase(["apple", "banana", "cherry"])
+print(result)  # Output: ["APPLE", "BANANA", "CHERRY"]
+
+#Lambda function to count the number of vowels in a string:
+count_vowels = lambda s: sum(1 for char in s if char.lower() in "aeiou")
+result = count_vowels("Hello, World!")
+print(result)  # Output: 3
+
+#Lambda function to calculate the factorial of a number using functools.reduce:
+from functools import reduce
+factorial = lambda n: reduce(lambda x, y: x * y, range(1, n + 1), 1)
+result = factorial(5)
+print(result)  # Output: 120
+
+#Lambda function to generate a Fibonacci sequence up to a specified number of terms:
+from functools import reduce
+fibonacci = lambda n: reduce(lambda x, _: x + [x[-1] + x[-2]], range(n - 2), [0, 1])
+result = fibonacci(10)
+print(result)  # Output: [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+
+# Pass a lambda function as an argument to my_function()
+def my_function(func):
+    return func(10)
+print(my_function(lambda x: x * 2))
+
+# Calculate the area of a triangle
+# Use a lambda function to calculate the area of a triangle with a base of 10 and a height of 5
+def calculate_area_triangle(base, height):
+    return (base * height) / 2
+print(calculate_area_triangle(10, 5))
+
+# Find the maximum element in the list using a lambda function
+my_list = [1, 2, 3, 4, 5]
+max_element = max(my_list, key=lambda x: x)
+print(max_element)
+
+# Create a dictionary from the list of tuples using a lambda function
+my_list = [(1, 'a'), (2, 'b'), (3, 'c')]
+my_dict = dict(map(lambda x: (x[0], x[1]), my_list))
+print(my_dict)
+
+# Filter out the elements in the list that are less than 5
+my_list = [1, 2, 3, 4, 5]
+def filter_less_than(list_of_elements, threshold):
+    return list(filter(lambda x: x < threshold, list_of_elements))
+filtered_list = filter_less_than(my_list, 5)
+print(filtered_list)
+
+# Find the element in the list that is closest to the target value using a lambda function
+my_list = [1, 2, 3, 4, 5]
+target_value = float(input("Enter a number (1 t0 5): "))
+closest_element = min(my_list, key=lambda x: abs(x - target_value))
+print(closest_element)
+
+# Create a list of all the unique elements in the list using a lambda function
+my_list = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5]
+unique_list = list(set(my_list))
+print(unique_list)
+
+# Reverse the strings in the list using the reverse_list() function
+my_list=["HELLO","WORLD"]
+def reverse_list(list_of_strings):
+    return list(map(lambda x: x[::-1], list_of_strings))
+reversed_list = reverse_list(my_list)
+print(reversed_list)
+
+# Sort the numbers in the list in descending order using the sort_list_descending() function
+my_list=[99,51465,2,63,728,0,1]
+def sort_list_descending(list_of_numbers):
+    return sorted(list_of_numbers, key=lambda x: x, reverse=True)
+sorted_list = sort_list_descending(my_list)
+print(sorted_list)
+
+
+# Format each string in the list using a lambda function
+# Apply the lambda function to each element in the list
+my_list = ['hello', 'world', 'python']
+format_list = lambda x: f"{x.capitalize()}!..."
+formatted_list = list(map(format_list, my_list))
+print(formatted_list)
+
+# Group the strings by their first letter using a lambda function
+# Apply the lambda function to each element in the list
+my_list = ['hello', 'world', 'python', 'apple', 'banana']
+group_by_first_letter = lambda x: x[0]
+grouped_list = {}
+for string in my_list:
+    key = group_by_first_letter(string)
+    if key not in grouped_list:
+        grouped_list[key] = []
+    grouped_list[key].append(string)
+print(grouped_list)
+
+# Round the numbers to 2 decimal places using a lambda function
+# Apply the lambda function to each element in the list
+my_list = [1.2345, 6.7890, 9.8765]
+round_to_two_decimals = lambda x: round(x, 2)
+rounded_list = list(map(round_to_two_decimals, my_list))
+print(rounded_list)
+
+# Increment each number in the list using a lambda function
+# Apply the lambda function to each element in the list
+my_list = [1, 2, 3, 4, 5]
+increment = lambda x: x + 1
+incremented_list = list(map(increment, my_list))
+print(incremented_list)
+
+# Convert each string in the list to lowercase using a lambda function
+# Apply the lambda function to each element in the list
+my_list = ['HELLO', 'WORLD', 'PYTHON']
+to_lowercase = lambda x: x.lower()
+lowercased_list = list(map(to_lowercase, my_list))
+print(lowercased_list)
+
+# Get the name of each person from the list of dictionaries using a lambda function
+# Apply the lambda function to each element in the list
+my_dict_list = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}, {'name': 'Carol', 'age': 27}]
+get_name = lambda x: x['name']
+name_list = list(map(get_name, my_dict_list))
+print(name_list)
+
+# Get the age of each person from the list of dictionaries using a lambda function
+# Apply the lambda function to each element in the list
+my_dict_list = [{'name': 'Alice', 'age': 25}, {'name': 'Bob', 'age': 30}, {'name': 'Carol', 'age': 27}]
+get_name = lambda x: x['age']
+name_list = list(map(get_name, my_dict_list))
+print(name_list)
+
+# Get the longest string in the list using a lambda function
+my_list = ['hello', 'world', 'python', 'apple']
+longest_string = max(my_list, key=lambda x: len(x))
+print(longest_string)
+
+
+
+
+
+
+
+
+
